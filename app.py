@@ -472,10 +472,10 @@ if menu == "Emitir Laudo":
             st.error("❌ Preencha o Paciente, seu nome (Aluno) e confirme ao menos um exame acima.")
 
 # ==========================================
-# ÁREA DO PROFESSOR (IDENTAÇÃO CORRIGIDA)
+# ÁREA DO PROFESSOR
 # ==========================================
 elif menu == "Área do Professor":
-    st.title("🔐 Área do Professor - Auditoria")
+    st.title("🔐 Área do Professor")
     senha = st.text_input("Senha de Acesso:", type="password", key="senha_prof_final")
     
     if senha == SENHA_PROFESSOR:
@@ -514,6 +514,7 @@ elif menu == "Área do Professor":
                             df_reg.at[idx, 'Feedback'] = n_feed
                             df_reg.to_excel("laudos_registro.xlsx", index=False)
                             st.rerun()
+
 
 
 
